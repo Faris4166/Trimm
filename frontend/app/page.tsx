@@ -12,7 +12,8 @@ export default function Home() {
     event.preventDefault();
 
     try {
-      const response = await axios.post("/shorten", { url });
+      const apiUrl = process.env.NEXT_PUBLIC_API_URL || "http://localhost:8080";
+      const response = await axios.post(`${apiUrl}/shorten`, { url });
       const { short_url } = response.data;
       setShortUrl(short_url);
     } catch (error) {
@@ -21,7 +22,7 @@ export default function Home() {
   };
   const handleOpenUrl = () => {
     if (shortUrl) {
-      window.open(`http://localhost:8080/${shortUrl}`, "_blank");
+      window.open(`${process.env.NEXT_PUBLIC_API_URL || "http://localhost:8080"}/${shortUrl}`, "_blank");
     }
   };
   const handCopyUrl = () => {
