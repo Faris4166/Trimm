@@ -1,3 +1,5 @@
+<img src = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ1E8Y8wmRvq_NIojlLrWFTslT3rc1or-nOwy2lRK__JZCrJiMONIo9lzA&s=10">
+
 # Trimm - Project Documentation
 
 This project is a Full-Stack Web Application separated into Frontend, Backend, and Database components. It is containerized and can be easily managed and run using Docker Compose.
